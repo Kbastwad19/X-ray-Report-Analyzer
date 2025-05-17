@@ -24,7 +24,7 @@ To run the X-ray Report Analyzer, ensure you have the following installed:
 Follow these steps to set up and run the project:
 
 ### 1. Clone the Repository
-```bash
+```
 git clone https://github.com/Kbastwad19/X-ray-Report-Analyzer.git
 ```
 
