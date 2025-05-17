@@ -24,26 +24,39 @@ To run the X-ray Report Analyzer, ensure you have the following installed:
 Follow these steps to set up and run the project:
 
 ### 1. Clone the Repository
+```bash
 git clone https://github.com/Kbastwad19/X-ray-Report-Analyzer.git
-
+```
 
 ### 2. Create a Virtual Environment (Optional)
+```bash
 python -m venv vem
+```
 
 #### Activate the virtual environment:
-vem\Scripts\activate
+- **Windows**:
+  ```bash
+  vem\Scripts\activate
+  ```
+- **macOS/Linux**:
+  ```bash
+  source venv/bin/activate
+  ```
 
 ### 3. Install Dependencies
+```bash
 pip install -r requirements.txt
-
+```
 
 ### 4. Navigate to the Project Directory
+```bash
 cd manual
-
+```
 
 ### 5. Run the Project
+```bash
 python main.py
-
+```
 
 ## Usage
 To analyze an X-ray image, follow these steps:
@@ -54,15 +67,18 @@ Place the X-ray image in the `images/Fractured Bone/` directory and a resized ve
 ### 2. Configure the Input
 Edit `main.py` to specify the image name and model:
 - **Line 6**: Set `img_name` to the name of your image file (without extension).
+  ```python
   img_name = "new"
- 
+  ```
 - **Line 7**: Set `model_name` to one of the available models (`ridge_model`, `lr_model`, or `rfc_model`).
+  ```python
   model_name = "ridge_model"
- 
+  ```
 
 ### 3. Run the Script
+```bash
 python main.py
-
+```
 The script will:
 - Load the image and its resized version.
 - Apply preprocessing and segmentation.
@@ -84,8 +100,9 @@ The project supports three machine learning models for predicting the thresholdi
 | `rfc_model`   | Random Forest Classifier| Ideal for complex images with high variability or non-linear patterns.    | Use for challenging X-ray images with significant noise or irregular bones. |
 
 To change the model, update the `model_name` variable in `main.py`:
+```python
 model_name = "rfc_model"
-
+```
 
 ## Code Explanation
 The `main.py` script is the core of the project. Below is a breakdown of its key components:
@@ -169,11 +186,5 @@ pip install -r requirements.txt
 4. Push to the branch (`git push origin feature-branch`).
 5. Open a pull request.
 
-## License
-MIT License. See `LICENSE` for details.
-
 ## Contact
 For questions or feedback, reach out via [GitHub Issues](https://github.com/Kbastwad19/X-ray-Report-Analyzer/issues).
-``` 
-
-This markdown file preserves all the key information while organizing it into clear sections with proper formatting for headings, lists, tables, and code blocks. The structure makes it easy to navigate and read.
